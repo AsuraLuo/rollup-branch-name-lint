@@ -9,22 +9,22 @@
 ### Globally
 
 ```shell
-> npm install branch-lint -g
+> npm install branch-rule-lint -g
 > branch-lint
 ```
 
 ### As development dependency
 
 ```shell
-> npm install branch-lint -D
-> npm set-script lint:branch "branch-lint"
+> npm install branch-rule-lint -D
+> npm set-script lint:branch "branch-name-lint"
 ```
 
 ### Git hook
 
 ```json
 {
-  "pre-push": "branch-lint"
+  "pre-push": "branch-name-lint"
 }
 ```
 

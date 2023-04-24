@@ -1,12 +1,12 @@
 {
-  "name": "branch-lint",
+  "name": "branch-rule-lint",
   "version": "0.1.0",
   "description": "Flexible git branch name linter with some extra validating features",
   "main": "bin/index.js",
   "type": "module",
   "license": "MIT",
   "bin": {
-    "branch-lint": "./bin/index.js"
+    "branch-name-lint": "./bin/index.js"
   },
   "publishConfig": {
     "access": "public"
@@ -28,6 +28,7 @@
   "dependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
     "@rollup/plugin-typescript": "^11.1.0",
     "chalk": "^5.0.0",
     "cosmiconfig": "^7.0.1",
