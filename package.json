@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Flexible git branch name linter with some extra validating features",
   "main": "bin/index.js",
-  "type": "module",
   "license": "MIT",
   "bin": {
     "branch-name-lint": "./bin/index.js"
@@ -20,9 +19,12 @@
     "branch name linter",
     "branch name validator"
   ],
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "clean": "rm -rf bin",
-    "build": "rollup --config",
+    "build": "rollup --config --bundleConfigAsCjs",
     "lint": "eslint src/**/*.ts --fix"
   },
   "dependencies": {
@@ -48,6 +50,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
     "typescript": "^4.5.4"
   }
 }

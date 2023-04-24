@@ -11,7 +11,15 @@ export default defineConfig({
   input: 'src/index.ts',
   output: {
     file: 'bin/index.js',
-    format: 'commonjs'
+    format: 'cjs'
   },
-  plugins: [nodeResolve(), commonjs(), terser(), typescript()]
+  plugins: [
+    commonjs(),
+    nodeResolve({
+      exportConditions: ['node'],
+      browser: false
+    }),
+    terser(),
+    typescript()
+  ]
 })
