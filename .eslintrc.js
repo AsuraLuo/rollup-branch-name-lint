@@ -20,13 +20,13 @@ module.exports = {
     'import/extensions': 0,
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
-    'no-console': ['error', { allow: ['error', 'info', 'warn'] }],
+    'no-console': ['error', { allow: ['log', 'error', 'info', 'warn'] }],
     'no-param-reassign': 0,
     'no-plusplus': 0,
     'no-useless-escape': 0,
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
-    'no-restricted-syntax': ['error', 'WithStatement'],
+    'no-promise-executor-return': 0,
     'prettier/prettier': [
       'error',
       {

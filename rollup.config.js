@@ -14,7 +14,9 @@ export default defineConfig({
     format: 'cjs'
   },
   plugins: [
-    commonjs(),
+    commonjs({
+      ignoreDynamicRequires: true
+    }),
     nodeResolve({
       exportConditions: ['node'],
       browser: false

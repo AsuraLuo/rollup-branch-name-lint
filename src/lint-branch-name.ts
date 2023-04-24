@@ -1,4 +1,6 @@
 import { match } from 'path-to-regexp'
+import chalk from 'chalk'
+
 import { Config } from './get-config'
 import { branchProtectedError, branchNamePatternError } from './errors'
 
@@ -22,7 +24,15 @@ export const lintBranchName = (branchName: string, config: Config): boolean => {
 
   const branch = match(pattern, { decode: decodeURIComponent })(branchName)
 
-  if (!branch) throw branchNamePatternError
+  if (!branch) {
+    throw branchNamePatternError
+  } else {
+    console.log(
+      chalk.green(
+        `result: ${chalk.blue.underline.bold('the branch name valid success')}, welcome lint again!`
+      )
+    )
+  }
 
   return true
 }

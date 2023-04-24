@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import { LintError } from './errors'
 import { getConfig } from './get-config'
 import { printHint } from './print-hint'

@@ -1,6 +1,6 @@
 {
   "name": "branch-rule-lint",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Flexible git branch name linter with some extra validating features",
   "main": "bin/index.js",
   "license": "MIT",

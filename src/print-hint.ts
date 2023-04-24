@@ -25,5 +25,7 @@ export const printHint = (error: errors.LintError, config: Config) => {
         })
       }
       break
+    default:
+      break
   }
 }
