@@ -28,9 +28,7 @@ export const lintBranchName = (branchName: string, config: Config): boolean => {
     throw branchNamePatternError
   } else {
     console.log(
-      chalk.green(
-        `result: ${chalk.blue.underline.bold('the branch name valid success')}, welcome lint again!`
-      )
+      `result: the branch ${chalk.green(branchName)} name valid success, welcome lint again!`
     )
   }
 

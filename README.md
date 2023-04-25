@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-# **<div align="center">Branch Lint</div>**
+# **<div>Branch Lint</div>**
 
 <!-- markdownlint-enable -->
 
@@ -10,7 +10,7 @@
 
 ```shell
 > npm install branch-rule-lint -g
-> branch-lint
+> branch-name-lint
 ```
 
 ### As development dependency

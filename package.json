@@ -1,15 +1,17 @@
 {
   "name": "branch-rule-lint",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Flexible git branch name linter with some extra validating features",
   "main": "bin/index.js",
   "license": "MIT",
   "bin": {
     "branch-name-lint": "./bin/index.js"
   },
-  "publishConfig": {
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AsuraLuo/rollup-branch-name-lint.git"
   },
+  "homepage": "https://github.com/AsuraLuo/rollup-branch-name-lint.git",
   "keywords": [
     "lint",
     "validate",
@@ -52,5 +54,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8",
     "typescript": "^4.5.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
