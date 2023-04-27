@@ -39,6 +39,7 @@ interface Config {
   pattern: string
   params: Record<string, string[]>
   prohibited: string[]
+  skip: string[]
 }
 ```
 
@@ -73,7 +74,8 @@ module.exports = {
     type: ['fix', 'docs', 'misc', 'improve', 'introduce'],
     name: ['[a-z0-9-]+']
   },
-  prohibited: ['ci', 'wip', 'main', 'test', 'build', 'master', 'release']
+  prohibited: ['ci', 'wip', 'main', 'test', 'build', 'master', 'release'],
+  skip: ['staging']
 }
 ```
 
@@ -82,7 +84,7 @@ module.exports = {
 **BranchNameLint** uses [path-to-regexp](https://www.npmjs.com/package/path-to-regexp)
 to check if branch name matches the `pattern` provided in config.
 
-Firstly branch name will be checked if its `prohibited` or not. On the next step,
+The `skip` option will allow push code the this branch no any lint. Firstly branch name will be checked if its `prohibited` or not. On the next step,
 if `params` are provided, `pattern` parts will be modified/populated using
 respective keys. For example:
 
@@ -102,7 +104,8 @@ docs for advanced patterns.
 module.exports = {
   pattern: '', // or other falsy value: undefined | 0 | null | false
   params: {},
-  prohibited: ['master', 'main', 'build', 'test', 'wip', 'ci', 'release']
+  prohibited: ['master', 'main', 'build', 'test', 'wip', 'ci', 'release'],
+  skip: ['staging']
 }
 ```
 
@@ -113,7 +116,8 @@ module.exports = {
     type: ['feature', 'fix', 'misc', 'docs'],
     issue: ['lbn-[a-z0-9-]+']
   },
-  prohibited: ['master', 'main', 'build', 'test', 'wip', 'ci', 'release']
+  prohibited: ['master', 'main', 'build', 'test', 'wip', 'ci', 'release'],
+  skip: ['staging']
 }
 ```
 
@@ -148,6 +152,7 @@ module.exports = {
     type: ['feature', 'fix', 'misc', 'docs'],
     scope: readDirectories('./apps')
   },
-  prohibited: ['master', 'main', 'build', 'test', 'wip', 'ci', 'release']
+  prohibited: ['master', 'main', 'build', 'test', 'wip', 'ci', 'release'],
+  skip: ['staging']
 }
 ```

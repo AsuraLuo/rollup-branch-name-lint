@@ -6,7 +6,10 @@ import { branchProtectedError, branchNamePatternError } from './errors'
 
 export const lintBranchName = (branchName: string, config: Config): boolean => {
   let { pattern } = config
-  const { params, prohibited } = config
+  const { params, prohibited, skip = [] } = config
+
+  // Branch name lint whitelist
+  if (skip.includes(branchName)) return true
 
   if (prohibited.includes(branchName)) throw branchProtectedError
   if (!pattern) return true
