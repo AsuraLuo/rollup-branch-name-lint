@@ -4,7 +4,7 @@ export interface Config {
   pattern: string
   params: Record<string, string[]>
   prohibited: string[]
-  skip?: string[]
+  whiteList?: string[]
 }
 
 const defaultConfig: Config = {
